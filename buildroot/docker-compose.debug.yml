@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  spongeforge:
+    image: spongeforge
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 25565:25565
