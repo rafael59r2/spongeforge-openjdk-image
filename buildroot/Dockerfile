@@ -50,7 +50,8 @@ RUN wget -O ${FORGE_INST_JAR} ${FORGE_JAR_LINK} \
 && rm -f ${FORGE_INST_JAR} \
 && chown -R root.root "${SPONGEFORGE_HOME}" \
 && find "${SPONGEFORGE_HOME}" -type d -exec chmod 755 "{}"  \; \
-&& find "${SPONGEFORGE_HOME}" -type f -exec chmod 644 "{}"  \; 
+&& find "${SPONGEFORGE_HOME}" -type f -exec chmod 644 "{}"  \; \
+&& chmod 4777 /sbin/su-exec
 
 
 # Preparing workplace
