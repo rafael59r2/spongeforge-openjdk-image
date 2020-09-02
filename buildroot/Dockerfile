@@ -30,15 +30,15 @@ RUN	chmod +x /usr/local/bin/entrypoint
 
 # Version setup
 ENV	MINECRAFT_VER="1.12.2" \
-	FORGE_VER="14.23.4.2705" \
-    SPONGE_VER="2705-7.1.0-BETA-3169"
+	FORGE_VER="14.23.5.2854" \
+    SPONGE_VER="2838-7.3.0"
 
 # Shortcuts and stuff, usually not for change (part 2)
 ENV FORGE_INST_JAR="/tmp/Forge-installer.jar" \
     FORGE_SERVER_JAR="Forge-server.jar" \
     SPONGE_JAR="spongemod.jar"
 
-ENV FORGE_JAR_LINK="http://files.minecraftforge.net/maven/net/minecraftforge/forge/${MINECRAFT_VER}-${FORGE_VER}/forge-1.12.2-${FORGE_VER}-installer.jar" \
+ENV FORGE_JAR_LINK="http://files.minecraftforge.net/maven/net/minecraftforge/forge/${MINECRAFT_VER}-${FORGE_VER}/forge-${MINECRAFT_VER}-${FORGE_VER}-installer.jar" \
     SPONGE_JAR_LINK="https://repo.spongepowered.org/maven/org/spongepowered/spongeforge/${MINECRAFT_VER}-${SPONGE_VER}/spongeforge-${MINECRAFT_VER}-${SPONGE_VER}.jar"
 
 WORKDIR	"${SPONGEFORGE_HOME}"
